@@ -1,0 +1,14 @@
+name: shell script
+
+on: push
+
+jobs:
+    name: shell script code
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@main
+            - name: Execute the script
+              run: |
+                    chmod +x script.sh
+                    ./script.sh
