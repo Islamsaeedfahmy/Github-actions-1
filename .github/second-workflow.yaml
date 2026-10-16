@@ -1,0 +1,17 @@
+name: second-workflow
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@main
+               
+            - name: welcome message
+              run: | 
+                echo "Welcome to my first workflow"
+                ls -lrth
+                sudo apt install cowsay
+                cowsay -f dragon "Run for cover, I am Dragon....RAWR" >> dragon.txt
