@@ -3,7 +3,7 @@ name: shell script
 on: push
 
 jobs:
-    name: shell script code
+    shell-script:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
